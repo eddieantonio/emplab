@@ -2,7 +2,7 @@
 %
 % Copyright (C) Eddie Antonio Santos <easantos@ualberta.ca>
 % -------------------------------------------------------
-% 
+%
 % This file may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3
 % of this license or (at your option) any later version.
@@ -10,7 +10,7 @@
 %
 %    http://www.latex-project.org/lppl.txt
 %
-% and version 1.3 or later is part of all distributions of LaTeX 
+% and version 1.3 or later is part of all distributions of LaTeX
 % version 2005/12/01 or later.
 %
 % \fi
@@ -28,13 +28,13 @@
 %<*driver>
 \documentclass{ltxdoc}
 \usepackage{emplab}
-\EnableCrossrefs
-\CodelineIndex
-\RecordChanges
+\EnableCrossrefs%
+\CodelineIndex%
+\RecordChanges%
 \begin{document}
   \DocInput{emplab.dtx}
-  \PrintChanges
-  \PrintIndex
+  \PrintChanges%
+  \PrintIndex%
 \end{document}
 %</driver>
 % \fi
@@ -63,7 +63,7 @@
 % \GetFileInfo{emplab.sty}
 %
 % \DoNotIndex{\newcommand,\newenvironment}
-% 
+%
 %
 % \title{The \textsf{emplab} package\thanks{This document
 %   corresponds to \textsf{emplab}~\fileversion, dated \filedate.}}
@@ -85,16 +85,23 @@
 % We extended the method used by So-and-So \etal~\cite{soandso}.
 %
 % \DescribeMacro{\ngram}
-% Use |\ngram| to typset \ngram\ appropriately. 
+% Use |\ngram| to typset \ngram\ appropriately.
 %
 % |We built an \ngram\ language model.|
 %
 % We built an \ngram\ language model.
 %
+% \DescribeMacro{\tfidf}
+% Use |\tfidf| to typset \tfidf\ appropriately.
+%
+% |We calculated \tfidf.|
+%
+% We calculated \tfidf.
+%
 % \DescribeMacro{\token \marg{text}}
 % \DescribeMacro{\stoken \marg{text}}
 % Use |\token|, and its small-caps variant |\stoken| to typeset tokens for use
-% in demonstrating a natural language pipeline. 
+% in demonstrating a natural language pipeline.
 %
 % |Accuracy was highest for \token{if} and \stoken{Identifier} tokens.|
 %
@@ -123,6 +130,12 @@
 % constant, and not an abbreviation.
 %    \begin{macrocode}
 \newcommand{\ngram}{\(n\)-gram}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\tfidf}
+%    \begin{macrocode}
+\newcommand{\tfidf}{tf-idf}
 %    \end{macrocode}
 % \end{macro}
 %
