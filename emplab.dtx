@@ -34,7 +34,7 @@
 \begin{document}
   \DocInput{emplab.dtx}
   \PrintChanges%
-  \PrintIndex%
+  %\PrintIndex%
 \end{document}
 %</driver>
 % \fi
@@ -77,62 +77,84 @@
 %
 % \section{Usage}
 %
+% \noindent%
 % \DescribeMacro{\etal}
 % Use |\etal| to typeset ``\etal''\ appropriately.
 %
-% |We extended the method used by So-and-So \etal~\cite{soandso}.|
+% \begin{quote}
+%   |We extended the method in So-and-So \etal~\cite{soandso}.|
 %
-% We extended the method used by So-and-So \etal~\cite{soandso}.
+%   We extended the method in So-and-So \etal~\cite{soandso}.
+% \end{quote}
 %
+% \noindent%
 % \DescribeMacro{\ngram}
 % Use |\ngram| to typset \ngram\ appropriately.
 %
-% |We built an \ngram\ language model.|
+% \begin{quote}
+%   |We built an \ngram\ language model.|
 %
-% We built an \ngram\ language model.
+%   We built an \ngram\ language model.
+% \end{quote}
 %
+% \noindent%
 % \DescribeMacro{\tfidf}
 % Use |\tfidf| to typset \tfidf\ appropriately.
 %
-% |We calculated \tfidf.|
+% \begin{quote}
+%   |We calculated \tfidf.|
 %
-% We calculated \tfidf.
+%   We calculated \tfidf.
+% \end{quote}
 %
+% \noindent%
 % \DescribeMacro{\token \marg{text}}
 % \DescribeMacro{\stoken \marg{text}}
 % Use |\token|, and its small-caps variant |\stoken| to typeset tokens for use
 % in demonstrating a natural language pipeline.
 %
-% |Accuracy was highest for \token{if} and \stoken{Identifier} tokens.|
+% \begin{quote}
+%   |Accuracy was highest for \token{if}, \token{\{},|\\
+%   |\stoken{Identifier}, and \stoken{String} tokens.|
 %
-% Accuracy was highest for \token{if} and \stoken{Identifier} tokens.
+%   Accuracy was highest for \token{if}, \token{\{},
+%   \stoken{Identifier}, and \stoken{String} tokens.
+% \end{quote}
 %
+% \noindent%
 % \DescribeMacro{\researchquestion\marg{text}}
 % \DescribeMacro{\RQ\meta{number}}
 % Use |\researchquestion| to declare a research question. Refer to it inline
 % in text using |\RQ|. In both cases, you must explicitly provide the research
 % question number.
 %
-% |\researchquestion{\RQ{1}: What do we do with 14,374 pairs of stolen underwear?}|
+% \begin{quote}
+%   |\researchquestion{\RQ{1}:|\\
+%   |   What do we do with 14,374 pairs of stolen underwear?|\\
+%   |}|
 %
-% \researchquestion{\RQ{1}: What do we do with 14,374 pairs of stolen underwear?}
+%   \researchquestion{\RQ{1}: What do we do with 14,374 pairs of stolen underwear?}
+% \end{quote}
 %
-% |The answer to \RQ1 proved to be inconclusive.|
+% \begin{quote}
+%   |The answer to \RQ1 proved to be inconclusive.|
 %
-% The answer to \RQ1 proved to be inconclusive.
+%   The answer to \RQ1 proved to be inconclusive.
+% \end{quote}
 %
+% \noindent%
 % \DescribeMacro{\hassanbox}
-%
 % Wraps text in a box to emphasize a point, such as a research question or a
 % result.
 %
 % \begin{quote}
-%   |\hassanbox{Shigesato Itoi seemed to really like The Beatles}|
+%   |\hassanbox{Shigesato Itoi seemed to really like The Beatles.}|
 %
-%   \hassanbox{Shigesato Itoi seemed to really like The Beatles}
+%   \hassanbox{Shigesato Itoi seemed to really like The Beatles.}
 % \end{quote}
 %
 % \StopEventually{}
+%
 %
 % \section{Implementation}
 %
@@ -194,4 +216,15 @@
 % \end{macro}
 %
 % \Finale
+%
+%\begin{thebibliography}{9}
+%
+%\bibitem{soandso}
+%  Foobar So-and-So,
+%  \emph{An example bibliography entry},
+%  Fake publisher, Persephone,
+%  2nd edition,
+%  2017.
+%
+%\end{thebibliography}
 \endinput
