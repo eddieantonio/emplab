@@ -3,7 +3,7 @@ PACKAGE = emplab
 .PHONY: all sty doc
 all: sty doc
 sty: $(PACKAGE).sty
-doc: $(PACKAGE).pdf
+doc: $(PACKAGE).pdf $(PACKAGE).sty
 
 %.sty: %.dtx %.ins
 	latex $*.ins

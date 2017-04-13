@@ -121,6 +121,17 @@
 %
 % The answer to \RQ1 proved to be inconclusive.
 %
+% \DescribeMacro{\hassanbox}
+%
+% Wraps text in a box to emphasize a point, such as a research question or a
+% result.
+%
+% \begin{quote}
+%   |\hassanbox{Shigesato Itoi seemed to really like The Beatles}|
+%
+%   \hassanbox{Shigesato Itoi seemed to really like The Beatles}
+% \end{quote}
+%
 % \StopEventually{}
 %
 % \section{Implementation}
@@ -163,6 +174,22 @@
 %    \begin{macrocode}
 \newcommand{\token}[1]{{\small\framebox{#1}}}
 \newcommand{\stoken}[1]{\token{\textsc{#1}}}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\hassanbox}
+%    \begin{macrocode}
+\newcommand{\hassanbox}[1]{%
+  \smallskip%
+  \noindent\framebox{%
+    \begin{minipage}[c]{0.97\linewidth}%
+      \begin{center}%
+        #1\par%
+      \end{center}%
+    \end{minipage}%
+  }%
+  \smallskip%
+}
 %    \end{macrocode}
 % \end{macro}
 %
