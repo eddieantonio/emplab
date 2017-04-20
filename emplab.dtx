@@ -160,9 +160,10 @@
 %
 % \begin{macro}{\ngram}
 % It uses a math mode \(n\) to emphasize that \(n\) is a mathematical
-% constant, and not an abbreviation.
+% constant, and not an abbreviation. We use |$$| instead of |\(|
+% and |\)| because the latter are \emph{fragile} commands.
 %    \begin{macrocode}
-\newcommand{\ngram}{\(n\)-gram}
+\newcommand{\ngram}{$n$-gram}
 %    \end{macrocode}
 % \end{macro}
 %
